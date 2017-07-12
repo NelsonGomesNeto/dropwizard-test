@@ -24,9 +24,7 @@ public class SampleServiceConfiguration extends Configuration {
   }
 
   @JsonProperty
-  public String getDefaultName() {
-    return defaultName;
-  }
+  public String getDefaultName() { return defaultName; }
 
   @JsonProperty
   public void setDefaultName(String name) {

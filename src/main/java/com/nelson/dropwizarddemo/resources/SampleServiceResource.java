@@ -27,7 +27,13 @@ public class SampleServiceResource {
   @GET
   @Timed
   public Saying sayHello(@QueryParam("name") Optional<String> name) {
-    final String value = String.format(template, name.orElse(defaultName));
+
+    final String value;
+    if  (!name.isPresent() || !name.get().equalsIgnoreCase("nelson"))
+      value = "You're not my master!!";
+    else
+      value = String.format(template, name.get());
+
     return new Saying(counter.incrementAndGet(), value);
   }
   /*@GET

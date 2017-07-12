@@ -1,5 +1,2 @@
-#template: Hello, %s!
-#defaultName: Stranger
-http:
-  port: 8080
-  adminPort: 8081
+template: Hello, %s!
+defaultName: Stranger

@@ -6,15 +6,15 @@ import com.nelson.dropwizarddemo.api.Saying;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.concurrent.atomic.AtomicLong;
-//import java.util.Optional;
+import java.util.Optional;
 /**
  * Created by ngome on 10/07/2017.
  */
 
-@Path("/com.nelson.dropwizarddemo/{name}")
-//@Produces(MediaType.APPLICATION_JSON)
+@Path("/hello-world")
+@Produces(MediaType.APPLICATION_JSON)
 public class SampleServiceResource {
-  /*private final String template;
+  private final String template;
   private final String defaultName;
   private final AtomicLong counter;
 
@@ -29,9 +29,9 @@ public class SampleServiceResource {
   public Saying sayHello(@QueryParam("name") Optional<String> name) {
     final String value = String.format(template, name.orElse(defaultName));
     return new Saying(counter.incrementAndGet(), value);
-  }*/
-  @GET
+  }
+  /*@GET
   public String sayHello(@PathParam("name") String name) {
     return "Hello, " + name + "!";
-  }
+  }*/
 }
